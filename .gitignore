@@ -11,7 +11,6 @@ __pycache__/
 .Python
 .env
 .env.example
-
 env/
 build/
 develop-eggs/
@@ -43,3 +42,5 @@ certs/
 coverage.xml
 # Local Netlify folder
 .netlify
+
+nightwalkers/
