@@ -4,6 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import get_user_model
 from .models import Post, Comment, Like
 from django.db.models import Count
+
 # from django.db.models import Q
 import json
 
@@ -243,7 +244,7 @@ def like_post(request, post_id):
         post = get_object_or_404(Post, id=post_id)
         # Check if the user has already liked the post
         print(user_id, is_liked, like_type, post_id)
-        # if like_type in ["Like", "Clap", "Support", "Heart", "Bulb", "Laugh"] and 
+        # if like_type in ["Like", "Clap", "Support", "Heart", "Bulb", "Laugh"] and
         # Like.objects.filter(user=user, post=post, like_type=like_type).exists():
         if Like.objects.filter(user=user, post=post).exists():
             print("exists")
