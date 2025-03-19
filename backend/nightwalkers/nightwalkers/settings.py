@@ -19,8 +19,9 @@ from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-GDAL_LIBRARY_PATH = os.popen('brew --prefix gdal').read().strip() + '/lib/libgdal.dylib'
-GEOS_LIBRARY_PATH = os.popen('brew --prefix geos').read().strip() + '/lib/libgeos_c.dylib'
+# Allan: uncomment when running locally
+# GDAL_LIBRARY_PATH = os.popen('brew --prefix gdal').read().strip() + '/lib/libgdal.dylib'
+# GEOS_LIBRARY_PATH = os.popen('brew --prefix geos').read().strip() + '/lib/libgeos_c.dylib'
 
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 # Quick-start development settings - unsuitable for production
