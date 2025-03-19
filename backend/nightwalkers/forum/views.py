@@ -243,7 +243,8 @@ def like_post(request, post_id):
         post = get_object_or_404(Post, id=post_id)
         # Check if the user has already liked the post
         print(user_id, is_liked, like_type, post_id)
-        # if like_type in ["Like", "Clap", "Support", "Heart", "Bulb", "Laugh"] and Like.objects.filter(user=user, post=post, like_type=like_type).exists():
+        # if like_type in ["Like", "Clap", "Support", "Heart", "Bulb", "Laugh"] and 
+        # Like.objects.filter(user=user, post=post, like_type=like_type).exists():
         if Like.objects.filter(user=user, post=post).exists():
             print("exists")
             if not is_liked:
