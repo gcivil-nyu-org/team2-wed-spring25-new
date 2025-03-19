@@ -9,8 +9,10 @@ env:
 
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install -y gdal-bin libgdal-dev  # Install system GDAL
-  - gdalinfo --version  # Check installed GDAL version
+  - sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable  # Enables newer GDAL versions
+  - sudo apt-get update -qq
+  - sudo apt-get install -y gdal-bin libgdal-dev
+  - gdalinfo --version  # Check if it installed correctly
 
 cache:
   directories:
